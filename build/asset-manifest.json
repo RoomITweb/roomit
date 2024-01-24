@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f1eb9371.css",
+    "main.js": "/static/js/main.0245086c.js",
+    "static/js/787.551db05b.chunk.js": "/static/js/787.551db05b.chunk.js",
+    "static/media/SF-Pro-Text-Semibold.otf": "/static/media/SF-Pro-Text-Semibold.e16deadd9dc50f769f31.otf",
+    "static/media/SF-Pro-Text-Medium.otf": "/static/media/SF-Pro-Text-Medium.eec811a8c90a516708ea.otf",
+    "static/media/SF-Pro-Text-Heavy.otf": "/static/media/SF-Pro-Text-Heavy.4f6b327cac5ca4071e79.otf",
+    "static/media/SF-Pro-Text-Bold.otf": "/static/media/SF-Pro-Text-Bold.f321f7b8a04248a4394c.otf",
+    "static/media/SF-Pro-Text-Light.otf": "/static/media/SF-Pro-Text-Light.9f516e09570f34609f07.otf",
+    "static/media/SF-Pro-Text-Regular.otf": "/static/media/SF-Pro-Text-Regular.ba21d41dbb34b2e04643.otf",
+    "static/media/PUP_LOGO.png": "/static/media/PUP_LOGO.42c28a9a6c7a8e0193a2.png",
+    "static/media/logo_web.png": "/static/media/logo_web.5b5aabec03a208bc945f.png",
+    "static/media/hamburger-menu-icon.webp": "/static/media/hamburger-menu-icon.ef5dea4fac21c171e142.webp",
+    "index.html": "/index.html",
+    "main.f1eb9371.css.map": "/static/css/main.f1eb9371.css.map",
+    "main.0245086c.js.map": "/static/js/main.0245086c.js.map",
+    "787.551db05b.chunk.js.map": "/static/js/787.551db05b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1eb9371.css",
+    "static/js/main.0245086c.js"
+  ]
+}
