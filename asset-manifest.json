@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/roomit/static/css/main.f35b523c.css",
-    "main.js": "/roomit/static/js/main.406898d9.js",
+    "main.css": "/roomit/static/css/main.1d542034.css",
+    "main.js": "/roomit/static/js/main.348eaf76.js",
     "static/js/988.6f754495.chunk.js": "/roomit/static/js/988.6f754495.chunk.js",
     "static/media/SF-Pro-Text-Semibold.otf": "/roomit/static/media/SF-Pro-Text-Semibold.e16deadd9dc50f769f31.otf",
     "static/media/SF-Pro-Text-Medium.otf": "/roomit/static/media/SF-Pro-Text-Medium.eec811a8c90a516708ea.otf",
@@ -14,12 +14,12 @@
     "static/media/logo_web.png": "/roomit/static/media/logo_web.5b5aabec03a208bc945f.png",
     "static/media/hamburger-menu-icon.webp": "/roomit/static/media/hamburger-menu-icon.ef5dea4fac21c171e142.webp",
     "index.html": "/roomit/index.html",
-    "main.f35b523c.css.map": "/roomit/static/css/main.f35b523c.css.map",
-    "main.406898d9.js.map": "/roomit/static/js/main.406898d9.js.map",
+    "main.1d542034.css.map": "/roomit/static/css/main.1d542034.css.map",
+    "main.348eaf76.js.map": "/roomit/static/js/main.348eaf76.js.map",
     "988.6f754495.chunk.js.map": "/roomit/static/js/988.6f754495.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f35b523c.css",
-    "static/js/main.406898d9.js"
+    "static/css/main.1d542034.css",
+    "static/js/main.348eaf76.js"
   ]
 }
