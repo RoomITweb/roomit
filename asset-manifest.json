@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/roomit/static/css/main.f35b523c.css",
+    "main.js": "/roomit/static/js/main.406898d9.js",
+    "static/js/988.6f754495.chunk.js": "/roomit/static/js/988.6f754495.chunk.js",
+    "static/media/SF-Pro-Text-Semibold.otf": "/roomit/static/media/SF-Pro-Text-Semibold.e16deadd9dc50f769f31.otf",
+    "static/media/SF-Pro-Text-Medium.otf": "/roomit/static/media/SF-Pro-Text-Medium.eec811a8c90a516708ea.otf",
+    "static/media/SF-Pro-Text-Heavy.otf": "/roomit/static/media/SF-Pro-Text-Heavy.4f6b327cac5ca4071e79.otf",
+    "static/media/SF-Pro-Text-Bold.otf": "/roomit/static/media/SF-Pro-Text-Bold.f321f7b8a04248a4394c.otf",
+    "static/media/SF-Pro-Text-Light.otf": "/roomit/static/media/SF-Pro-Text-Light.9f516e09570f34609f07.otf",
+    "static/media/SF-Pro-Text-Regular.otf": "/roomit/static/media/SF-Pro-Text-Regular.ba21d41dbb34b2e04643.otf",
+    "static/media/PUP_LOGO.png": "/roomit/static/media/PUP_LOGO.42c28a9a6c7a8e0193a2.png",
+    "static/media/templateCSV.xlsx": "/roomit/static/media/templateCSV.7092c998fb388154295f.xlsx",
+    "static/media/logo_web.png": "/roomit/static/media/logo_web.5b5aabec03a208bc945f.png",
+    "static/media/hamburger-menu-icon.webp": "/roomit/static/media/hamburger-menu-icon.ef5dea4fac21c171e142.webp",
+    "index.html": "/roomit/index.html",
+    "main.f35b523c.css.map": "/roomit/static/css/main.f35b523c.css.map",
+    "main.406898d9.js.map": "/roomit/static/js/main.406898d9.js.map",
+    "988.6f754495.chunk.js.map": "/roomit/static/js/988.6f754495.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f35b523c.css",
+    "static/js/main.406898d9.js"
+  ]
+}
