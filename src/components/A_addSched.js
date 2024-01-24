@@ -13,7 +13,7 @@ function AddSchedule() {
   const [creditUnits, setCreditUnits] = useState('');
   const [lecHours, setLecHours] = useState('');
   const [labHours, setLabHours] = useState('');
-  const [hours, setHours] = useState(''); // Modified to be calculated
+  const [hours, setHours] = useState('');
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
   const [day, setDay] = useState('');
@@ -21,7 +21,8 @@ function AddSchedule() {
   const [room, setRoom] = useState('');
   const [facultyList, setFacultyList] = useState([]);
   const [subjectCodes, setSubjectCodes] = useState([]);
-  const [subjectsData, setSubjectsData] = useState({});
+  const [subjectsData, setSubjectsData] = useState([]);
+  const [existingSchedules, setExistingSchedules] = useState([]);
 
   useEffect(() => {
     // Fetch faculty names from the 'users' collection with 'faculty' role
@@ -39,7 +40,6 @@ function AddSchedule() {
           for (const userId in usersData) {
             const user = usersData[userId];
             if (user.role === 'faculty') {
-              // Combine first name and last name
               const fullName = `${user.firstName} ${user.lastName}`;
               facultyNames.push(fullName);
             }
@@ -77,19 +77,42 @@ function AddSchedule() {
       }
     };
 
+    // Fetch existing schedules from the 'schedules' collection
+    const fetchExistingSchedules = async () => {
+      const database = getDatabase(app);
+      const schedulesRef = ref(database, 'schedules');
+
+      try {
+        const snapshot = await get(schedulesRef);
+        const schedulesData = [];
+
+        if (snapshot.exists()) {
+          const schedules = snapshot.val();
+
+          for (const scheduleId in schedules) {
+            const schedule = schedules[scheduleId];
+            schedulesData.push(schedule);
+          }
+
+          setExistingSchedules(schedulesData);
+        }
+      } catch (error) {
+        console.error('Error fetching existing schedules:', error);
+      }
+    };
+
     fetchFacultyNames();
     fetchSubjectCodes();
+    fetchExistingSchedules();
   }, []);
 
   useEffect(() => {
-    // Update subject details when subject code changes
     if (subjectCode && subjectCodes[subjectCode]) {
       const selectedSubject = subjectCodes[subjectCode];
       setSubjectDescription(selectedSubject.subjectDescription);
       setCourse(selectedSubject.course);
       setCreditUnits(selectedSubject.creditUnit);
     } else {
-      // Clear values if subject code is not found
       setSubjectDescription('');
       setCourse('');
       setCreditUnits('');
@@ -97,7 +120,6 @@ function AddSchedule() {
   }, [subjectCode, subjectCodes]);
 
   useEffect(() => {
-    // Calculate the total hours based on lecture and lab hours
     const totalHours = parseFloat(lecHours) + parseFloat(labHours);
     setHours(totalHours.toString());
   }, [lecHours, labHours]);
@@ -124,7 +146,20 @@ function AddSchedule() {
       return;
     }
 
-    // Store schedule information in Firebase Realtime Database
+    const existingSchedule = existingSchedules.find(
+      (schedule) =>
+        schedule.day === day &&
+        schedule.time === `${startTime} - ${endTime}` &&
+        schedule.room === room
+    );
+
+    if (existingSchedule) {
+      alert(
+        'A schedule with the same day, time, and room already exists. Please choose a different combination.'
+      );
+      return;
+    }
+
     const database = getDatabase(app);
     const schedulesRef = ref(database, 'schedules');
     const newSchedule = {
@@ -147,7 +182,6 @@ function AddSchedule() {
     push(schedulesRef, newSchedule)
       .then(() => {
         alert('Schedule added successfully!');
-        // Clear input fields
         setSchoolYear('');
         setSemester('');
         setFacultyName('');
@@ -166,7 +200,9 @@ function AddSchedule() {
       })
       .catch((error) => {
         console.error('Error adding schedule:', error);
-        alert('An error occurred while adding the schedule. Please try again.');
+        alert(
+          'An error occurred while adding the schedule. Please try again.'
+        );
       });
   };
 
@@ -424,6 +460,7 @@ function AddSchedule() {
            <option hidden>Select Building</option>
             <option value="Nantes Building">Nantes Building</option>
             <option value="Science Building">Science Building</option>
+            <option value="Suarez Building">Suarez Building</option>
           </select>
         </div>
         <div className="form-group">
@@ -457,6 +494,12 @@ function AddSchedule() {
                 <option value="204">204</option>
                 <option value="205">205</option>
                 <option value="206">206</option>
+              </>
+            )}
+            {building === 'Suarez Building' && (
+              <>
+                <option value="Com Lab 1">Com Lab 1</option>
+                <option value="Com Lab 2">Com Lab 2</option>
               </>
             )}
           </select>

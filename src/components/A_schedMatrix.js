@@ -68,8 +68,10 @@ function ViewScheduleMatrix({ schedules }) {
                       ) {
                         return (
                           <div key={index} style={cellWithScheduleStyle}>
+                            <p>{`${filteredSchedule.time}`}</p>
                             <p>{`${filteredSchedule.subjectCode} - ${filteredSchedule.subjectDescription}`}</p>
                             <p>{`${filteredSchedule.facultyName}`}</p>
+                            <p>{`${filteredSchedule.course}`}</p>
                           </div>
                         );
                       }

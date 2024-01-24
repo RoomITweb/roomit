@@ -101,7 +101,9 @@ function RcAttendance({ facultySchedules }) {
       return ['120', '121', '122', 'AVR', 'Keyboarding Lab', 'Speech Lab'];
     } else if (selectedBuilding === 'Science Building') {
       return ['105', '106', '107', '108', '203', '204', '205', '206'];
-    } else {
+    }else if (selectedBuilding === 'Suarez Building') {
+      return ['Com Lab 1', 'Com Lab 2'];
+    }else {
       return [];
     }
   };
@@ -127,6 +129,7 @@ function RcAttendance({ facultySchedules }) {
           <option value="All">Building</option>
           <option value="Nantes Building">Nantes Building</option>
           <option value="Science Building">Science Building</option>
+          <option value="Suarez Building">Suarez Building</option>
         </select>
         </div>
       </div>

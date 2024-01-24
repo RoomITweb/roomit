@@ -107,7 +107,9 @@ function ViewSchedule() {
       return ['120', '121', '122', 'AVR', 'Keyboarding Lab', 'Speech Lab'];
     } else if (buildingFilter === 'Science Building') {
       return ['105', '106', '107', '108', '203', '204', '205', '206'];
-    } else {
+    }else if (buildingFilter === 'Suarez Building') {
+      return ['Com Lab 1', 'Com Lab 2'];
+    }else {
       return [];
     }
   };

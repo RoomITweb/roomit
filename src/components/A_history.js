@@ -242,6 +242,7 @@ const handlePrint = () => {
           <option value="All">All</option>
           <option value="Nantes Building">Nantes Building</option>
           <option value="Science Building">Science Building</option>
+          <option value="Suarez Building">Suarez Building</option>
         </select>
       </div>
 
@@ -273,6 +274,17 @@ const handlePrint = () => {
             <option value="204">204</option>
             <option value="205">205</option>
             <option value="206">206</option>
+          </select>
+        </div>
+      )}
+
+    {buildingFilter === 'Suarez Building' && (
+        <div>
+          <label>Select Room:</label>
+          <select value={roomFilter} onChange={handleRoomFilterChange}>
+            <option value="All">All</option>
+            <option value="Com Lab 1">Com Lab 1</option>
+            <option value="Com Lab 2">Com Lab 2</option>
           </select>
         </div>
       )}

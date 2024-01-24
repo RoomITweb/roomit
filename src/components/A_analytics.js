@@ -108,6 +108,7 @@ function Analytics() {
   const buildingsAndRooms = {
     'Nantes Building': ['120', '121', '122', 'AVR', 'Keyboarding Lab', 'Speech Lab'],
     'Science Building': ['105', '106', '107', '108', '203', '204', '205', '206'],
+    'Suarez Building': ['Com Lab 1', 'Com Lab 2'],
   };
 
   const calculateRoomUsageByBuilding = (selectedPeriod) => {
